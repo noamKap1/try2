@@ -7,7 +7,7 @@
 #include "../Socket.h"
 
 int main(int argc, char *argv[]) {
-    std::vector<Flower> classified = flowersVector(readFromCSV(argv[0]));
+    std::vector<Flower> classified = flowersVector(readFromCSV(argv[1]));
     Classifier<Flower> classifier(classified, 5);
     Socket *sServer;
     sServer = new Server(INADDR_ANY, htons(55555));
